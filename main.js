@@ -94,9 +94,9 @@ for(let i=0; i<formData.length; i++){
   let obj = formData[i];
   let text;
   if (obj.options.length === 0) {
-    text = '<input class="formElem" type= "' + obj.type + '"id= "' + obj.id + '" placeholder="' + obj.label +'"><br>'
+    text = '<input class="fields" type= "' + obj.type + '"id= "' + obj.id + '" placeholder="' + obj.label +'"><br>'
   } else{
-    text = '<select required><option value=';
+    text = '<select required><option value="" disabled selected hidden>Select Language</option>';
     for(let i=0; i< obj.options.length; i++){
       let currOption = obj.options[i];
       text += '<option value"' + currOption.value + '">' + currOption.label + '</option>';
